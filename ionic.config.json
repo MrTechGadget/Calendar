@@ -1,5 +1,7 @@
 {
   "name": "calendarIntegration",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
