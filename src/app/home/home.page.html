@@ -8,8 +8,8 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item *ngFor="let cal of calendars" tappable>
-      <button ion-button icon-only item-start clear (click)="addEvent(cal)">
+    <ion-item *ngFor="let cal of calSvc.calendars" tappable>
+      <button ion-button icon-only item-start clear (click)="calSvc.addEvent(cal)">
         <ion-icon name="add"></ion-icon>
       </button>
       {{ cal.name }}
@@ -19,4 +19,6 @@
       </button>
     </ion-item>
   </ion-list>
+  <ion-button expand="block" (click)="calSvc.createCal(calSvc.calName)">Create Local {{ calSvc.calName }} Calendar</ion-button>
+  <ion-button expand="block" (click)="calSvc.deleteCal(calSvc.calName)">Delete Local {{ calSvc.calName }} Calendar</ion-button>
 </ion-content>
