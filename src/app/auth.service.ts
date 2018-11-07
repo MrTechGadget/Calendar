@@ -35,7 +35,7 @@ export class AuthService {
           form: false
         },
       },
-      { redirect_uri: window.location.href }
+      { redirect_uri: 'http://localhost:4200/'}
     );
   }
 

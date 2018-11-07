@@ -8,6 +8,7 @@
 
 <ion-content padding>
   <ion-list>
+    <ion-button expand="block" (click)="onLogin()">Login to Microsoft Account</ion-button>
     <ion-item *ngFor="let cal of calSvc.calendars" tappable>
       <button ion-button icon-only item-start clear (click)="calSvc.addEvent(cal)">
         <ion-icon name="add"></ion-icon>
