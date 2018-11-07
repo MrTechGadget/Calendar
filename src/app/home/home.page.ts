@@ -5,8 +5,6 @@ import { AngularWaitBarrier } from 'blocking-proxy/built/lib/angular_wait_barrie
 import { looseIdentical } from '@angular/core/src/util';
 
 import { CalendarService } from '../calendar.service';
-import { AuthService } from '../auth.service';
-
 
 @Component({
   selector: 'app-home',
@@ -15,7 +13,7 @@ import { AuthService } from '../auth.service';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, public calSvc: CalendarService, private plt: Platform, private authService: AuthService) {
+  constructor(public navCtrl: NavController, public calSvc: CalendarService, private plt: Platform) {
     this.plt.ready().then(() => {
       if (this.plt.is('ios')) {
         calSvc.createCal('O365');
@@ -28,7 +26,7 @@ export class HomePage {
   }
 
   onLogin() {
-    this.authService.login();
+    // this.authService.login();
   }
 
 }
